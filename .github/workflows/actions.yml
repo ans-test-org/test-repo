@@ -13,6 +13,11 @@ jobs:
       - name: Access the secret
         run: echo "The org level MY_PASS is ${{ secrets.MY_PASS }}"
 
+      - name: Test variable
+        env:
+          super_secret: ${{ secrets.MY_PASS }}
+        run: echo "The org level MY_PASS is $super_secret"
+
   environment-secrets:
     runs-on: ubuntu-latest
     environment: Production
