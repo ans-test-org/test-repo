@@ -8,10 +8,10 @@ jobs:
 
     steps:
       - name: Read a variable
-        run: echo "MY_APP is ${{ vars.APP_NAME }}
+        run: echo "MY_APP is ${{ vars.APP_NAME }}"
 
       - name: Access the secret
-        run: echo "The org level MY_PASS is ${{ secrets.MY_PASS }}
+        run: echo "The org level MY_PASS is ${{ secrets.MY_PASS }}"
 
   environment-secrets:
     runs-on: ubuntu-latest
@@ -19,4 +19,4 @@ jobs:
 
     steps:
       - name: Read env variable
-        run: echo "My app name is ${{ vars.APP_NAME }}""
+        run: echo "My app name is ${{ vars.APP_NAME }}"
