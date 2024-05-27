@@ -1,0 +1,11 @@
+name: Concurrency test
+on:
+  push
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: | 
+          sleep 30
+          echo testing
