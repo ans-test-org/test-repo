@@ -1,7 +1,7 @@
 name: Concurrency test
 on:
-  workflow_dispatch
-    json_input:
+  workflow_dispatch:
+    inputs:
       description: 'JSON input containing multiple parameters'
       required: true
       default: '{"ios_locked_version": "latest","ios_unlocked_version": "latest", "ios_exit_recovery_version": "latest", "ios_error_code_messages": "mnm_version": "latest", "midgard_version": "latest", "pilea_version": "latest", "pilea_a11_version": "latest", "pilea_16_version": "latest", "pepsi_max_version", "latest", "relay_version": "latest"}'
