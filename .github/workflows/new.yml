@@ -1,11 +1,14 @@
 name: Concurrency test
 on:
-  push
+  workflow_dispatch
+    json_input:
+      description: 'JSON input containing multiple parameters'
+      required: true
+      default: '{"ios_locked_version": "latest","ios_unlocked_version": "latest", "ios_exit_recovery_version": "latest", "ios_error_code_messages": "mnm_version": "latest", "midgard_version": "latest", "pilea_version": "latest", "pilea_a11_version": "latest", "pilea_16_version": "latest", "pepsi_max_version", "latest", "relay_version": "latest"}'
 
 jobs:
   test-job:
     runs-on: ubuntu-latest
     steps:
       - run: | 
-          sleep 30
-          echo testing
+         echo testing
